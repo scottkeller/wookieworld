@@ -1,0 +1,37 @@
+.link:focus   {
+    outline: 0;
+    box-shadow:none;
+}
+
+.sidebar-open{
+    -webkit-transition: width 1.5s ease;
+    -moz-transition: width 1.5s ease;
+    -o-transition: width 1.5s ease;
+    transition: width 1.5s ease;
+}
+
+.sidebar-closed{
+    -webkit-transition: width 1.5s ease;
+    -moz-transition: width 1.5s ease;
+    -o-transition: width 1.5s ease;
+    transition: width 1.5s ease;
+}
+
+.sidebar-footer-hide {
+    -webkit-transition: opacity .5s ease-in;
+    -moz-transition: opacity .5s ease-in;
+    -o-transition: opacity .5s ease-in;
+    transition: opacity .5s ease-in;
+}
+
+.sidebar-footer-show {
+    -webkit-transition: opacity 1.5s ease-in;
+    -moz-transition: opacity 1.5s ease-in;
+    -o-transition: opacity 1.5s ease-in;
+    transition: opacity 1.5s ease-in;
+}
+
+.sidebar-button-inner {
+    width: 30px;
+    height: 4px;
+}

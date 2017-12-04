@@ -4,9 +4,7 @@ import logo from './assets/chewbacca.svg';
 import './app.css';
 import SideBar from './components/sidebar';
 import store from './store';
-import CategoryList from './components/categorylist';
 
-const CATEGORY_LIST = <CategoryList/>;
 
 class App extends Component {
     render() {
@@ -24,7 +22,7 @@ class App extends Component {
 class SideNav extends Component {
     render() {
         return (
-            <SideBar className="w-20" list={CATEGORY_LIST} logo={logo}/>
+            <SideBar />
         )
     }
 }
@@ -32,8 +30,23 @@ class SideNav extends Component {
 class Content extends Component {
     render() {
         return (
-            <div className="w-80 h-100 bg-near-white tc">
-                <h1>Column Two</h1>
+            <div className="flex flex-auto flex-column h-100 bg-near-white tc">
+               <div className="flex z-999 bg-moon-gray">
+                   <div class="flex center">
+                       <div class="">
+                           <img src={logo} className="w5-l h5-l w3 h3"/>
+                       </div>
+
+                   </div>
+
+
+
+
+               </div>
+                <div className="flex flex-auto flex-column z-1 bg-near-white">
+                    <p class="f2-ns center lh-copy bb">Welcome to Wookie World</p>
+                    <p>foljopdgfjaogjfdopsdjfg</p>
+                </div>
             </div>
         )
     }

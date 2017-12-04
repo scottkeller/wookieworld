@@ -9,6 +9,7 @@ import starwars from '../assets/star-wars.svg';
 import planet from '../assets/planet.svg';
 import tiefighter from '../assets/tie_fighter.svg';
 import r2 from '../assets/r2d2.svg';
+import './categorylist.css';
 
 
 class CategoryList extends Component {
@@ -51,13 +52,15 @@ class CategoryList extends Component {
                     icon = r2;
             }
             return (
+                <a className="link no-underline pointer b f6 ttu tracked yellow" href="#" key={category.name}>
+                    <li className="nowrap category-list-item v-top ph3 pv2 w-100 dim" key={category.name}>
 
-                <li className="category-list-item v-top ph3 pv2 w-100" key={category.name}>
 
-                    <a className="link no-underline pointer b f6 ttu tracked yellow hover-moon-gray" href="#">
                         <img className="icon v-mid br1 w2 h2 mr2" src={icon} key={category.name}
-                             alt={category.icon}/>{category.name}</a>
-                </li>
+                             alt={category.icon}/>
+                        <label className={(this.props.icononly ? "o-0 label-hide" : "label-show o-100") + " pointer"} htmlFor={category.name}>{this.props.icononly ? "" : category.name}</label>
+                    </li>
+                </a>
 
             )
         })
@@ -65,7 +68,7 @@ class CategoryList extends Component {
 
     render() {
         return (
-            <ul className="category-list list center pa0 m2">
+            <ul className="category-list list center pa0">
                 {this.renderList()}
             </ul>
         )
