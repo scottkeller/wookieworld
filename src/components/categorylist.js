@@ -52,14 +52,10 @@ class CategoryList extends Component {
                     icon = r2;
             }
             return (
-                <a className="link no-underline pointer b f6 ttu tracked yellow" href="#" key={category.name}>
-                    <li className="nowrap category-list-item v-top ph3 pv2 w-100 dim" key={category.name}>
-
-
-                        <img className="icon v-mid br1 w2 h2 mr2" src={icon} key={category.name}
+                <a className="link no-underline dim pv2 ph3 pointer b f6 ttu tracked yellow left overflow-x-hidden" href="#" key={category.name}>
+                    <img className="icon v-mid br1 mr2 w2 h2" src={icon} key={category.name}
                              alt={category.icon}/>
-                        <label className={(this.props.icononly ? "o-0 label-hide" : "label-show o-100") + " pointer"} htmlFor={category.name}>{this.props.icononly ? "" : category.name}</label>
-                    </li>
+                    <label className={(this.props.icononly ? "label-hide o-0" : "label-show o-1" ) + " "} htmlFor={category.name}>{category.name}</label>
                 </a>
 
             )
@@ -67,11 +63,7 @@ class CategoryList extends Component {
     }
 
     render() {
-        return (
-            <ul className="category-list list center pa0">
-                {this.renderList()}
-            </ul>
-        )
+        return (<div className="flex flex-column nowrap">{this.renderList()}</div>)
     }
 }
 

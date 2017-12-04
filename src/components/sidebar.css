@@ -4,17 +4,19 @@
 }
 
 .sidebar-open{
-    -webkit-transition: width 1.5s ease;
-    -moz-transition: width 1.5s ease;
-    -o-transition: width 1.5s ease;
-    transition: width 1.5s ease;
+    width:180px;
+    -webkit-transition: width 1.5s ease-out;
+    -moz-transition: width 1.5s ease-out;
+    -o-transition: width 1.5s ease-out;
+    transition: width 1.5s ease-out;
 }
 
 .sidebar-closed{
-    -webkit-transition: width 1.5s ease;
-    -moz-transition: width 1.5s ease;
-    -o-transition: width 1.5s ease;
-    transition: width 1.5s ease;
+    width:65px;
+    -webkit-transition: width 1.5s ease-in;
+    -moz-transition: width 1.5s ease-in;
+    -o-transition: width 1.5s ease-in;
+    transition: width 1.5s ease-in;
 }
 
 .sidebar-footer-hide {
@@ -35,3 +37,13 @@
     width: 30px;
     height: 4px;
 }
+
+.sidebar {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+    height: 100%;
+    min-width: 65px;
+    max-width: 200px;
+}
+

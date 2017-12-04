@@ -29,26 +29,18 @@ class SideBar extends Component {
     render() {
         return (
 
-            <div
-                className={(this.state.visible ? "w5 sidebar-open" : "w3 sidebar-closed") + " flex flex-column h-100 bg-near-black relative"}>
+            <aside
+                className={(this.state.visible ? "sidebar-open " : "sidebar-closed ") + " sidebar flex flex-column bg-near-black overflow-hidden"}>
                 <div className="head left h3">
-                    <div className="absolute pa3">
+                    <div className=" pa3">
                         <SideBarButton handleMouseDown={this.handleMouseDown}/>
                     </div>
                 </div>
-                <nav className="flex-auto overflow-y-auto content bt bb b--mid-gray mt2 mb2">
+                <nav className="flex flex-column flex-auto content bt bb b--mid-gray mt2 mb2">
                     <CategoryList icononly={!this.state.visible}/>
                 </nav>
-                <div
-                    className={(this.state.visible ? "o-100 sidebar-footer-show" : "o-0 sidebar-footer-hide" ) + " h3 moon-gray tc"}>
 
-                    <small className="nowrap f8 tc">© 2017 <b className="ttu">Scott Keller</b>
-                        <br/>
-                        All Rights Reserved
-                    </small>
-
-                </div>
-            </div>
+            </aside>
 
         );
 
