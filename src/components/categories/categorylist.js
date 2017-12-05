@@ -74,12 +74,12 @@ class CategoryLink extends Component {
     render() {
         return (
             <NavLink to={'/' + (this.props.name === "home" ? "" : this.props.name)}
-                         className="link no-underline dim pv2 ph3 pointer b f6 ttu tracked yellow left overflow-x-hidden"
+                         className="dib link no-underline dim pv2 ph3 pointer b f6 ttu tracked yellow left overflow-x-hidden"
                          href="#" key={this.props.name}>
-            <img className="icon v-mid br1 mr2 w2 h2" src={this.props.icon} key={this.props.name}
+            <img className=" icon v-mid br1 mr2 w2 h2" src={this.props.icon} key={this.props.name}
                  alt={this.props.icon}/>
-            <label className={(this.props.icononly ? "label-hide o-0" : "label-show o-1" ) + " "}
-                   htmlFor={this.props.name}>{this.props.name}</label>
+            <span className={(this.props.icononly ? " pointer fadeout-opacity o-0" : "fadein-opacity o-1" ) + " "}
+                   htmlFor={this.props.name}>{this.props.name}</span>
         </NavLink>)
     };
 }

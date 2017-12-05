@@ -38,6 +38,18 @@ class SideBar extends Component {
                 <nav className="flex flex-column flex-auto content bt bb b--mid-gray mt2 mb2">
                     <CategoryList icononly={!this.state.visible}/>
                 </nav>
+                <footer class={(this.state.visible ? "fadein-opacity o-0" : "fadeout-opacity o-1" ) + "flex flex-column bottom-0 h4 tc overflow-x-hidden nowrap"}>
+                    <small class= "db mid-gray mb2 ">Design By: Scott Keller</small>
+                    <div className="ttu b2 ">
+                           <a href="mailto:scott.keller2390@gmail.com" title="Email" class="moon-gray link f6 fw1 dib dim">Email</a>
+                        <br/>
+                           <a target="_blank" href="http://www.linkedin.com/in/scottjameskeller"    title="LinkedIn" class="moon-gray link f6 fw1 dib dim">LinkedIn</a>
+                    <br/>
+                        <a target="_blank" href="https://github.com/scottkeller/wookieworld"  title="Source" class="moon-gray link f6 fw1 dib dim">Source</a>
+                    </div>
+
+
+                </footer>
 
             </aside>
 
