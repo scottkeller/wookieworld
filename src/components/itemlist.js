@@ -13,7 +13,7 @@ class ItemList extends Component {
                     url = url[url.length - 2];
                     return (
 
-                        <ItemCard data={d} key={d.name} to={this.props.to + "/" + url} logo={this.props.logo}/>
+                        <ItemCard data={d} key={d.name} to={this.props.to + "/" + url} logo={this.props.logo} displayname={d[this.props.displayname] || d.name}/>
 
                     )
                 })}

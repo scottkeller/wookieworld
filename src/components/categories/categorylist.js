@@ -1,17 +1,17 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import {loadCategories} from "../actions/category_actions";
-import luke from '../assets/luke-skywalker.svg';
-import deathstar from '../assets/death-star.svg';
-import greedo from '../assets/greedo.svg';
-import starwars from '../assets/star-wars.svg';
-import planet from '../assets/planet.svg';
-import tiefighter from '../assets/tie_fighter.svg';
-import r2 from '../assets/r2d2.svg';
-import chewbacca from '../assets/chewbacca.svg';
+import {loadCategories} from "../../actions/category_actions";
+import luke from '../../assets/luke-skywalker.svg';
+import deathstar from '../../assets/death-star.svg';
+import greedo from '../../assets/greedo.svg';
+import starwars from '../../assets/star-wars.svg';
+import planet from '../../assets/planet.svg';
+import tiefighter from '../../assets/tie_fighter.svg';
+import r2 from '../../assets/r2d2.svg';
+import chewbacca from '../../assets/chewbacca.svg';
 import './categorylist.css';
-import '../assets/transitions.css';
+import '../../assets/transitions.css';
 import {NavLink} from 'react-router-dom';
 
 

@@ -1,10 +1,15 @@
 import React from 'react';
-import {HashRouter as Router, Route} from 'react-router-dom';
+import {Provider} from 'react-redux';
+import {HashRouter as Router, Route, browserHistory} from 'react-router-dom';
 import App from './components/app';
 
-const Root = (props) => (<Router>
-        <Route path="/" component={App}/>
-    </Router>
+import store from './store';
+
+const Root = (props) => (<Provider store={store}>
+        <Router>
+            <Route path="/" component={App}/>
+        </Router>
+    </Provider>
 );
 
 export default Root;

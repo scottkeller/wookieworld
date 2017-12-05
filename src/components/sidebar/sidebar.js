@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './sidebar.css';
-import CategoryList from './categorylist';
+import CategoryList from '../categories/categorylist';
 import SideBarButton from './sidebarbutton';
 
 class SideBar extends Component {

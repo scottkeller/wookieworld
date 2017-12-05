@@ -6,5 +6,6 @@ import films from './reducers/film_reducer';
 import species from './reducers/species_reducer';
 import vehicles from './reducers/vehicle_reducer';
 import starships from './reducers/starship_reducer';
+import { routerReducer } from 'react-router-redux'
 
-export default combineReducers({categories, people, planets, films, species, vehicles, starships});
+export default combineReducers({categories, people, planets, films, species, vehicles, starships, routing: routerReducer});
