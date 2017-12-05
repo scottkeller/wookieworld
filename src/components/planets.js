@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import PeopleList from './peoplelist';
-import PeopleDetail from './peopledetail';
-import logo from '../assets/luke-skywalker.svg';
+import PlanetList from './planetlist';
+import PlanetDetail from './planetdetail';
+import logo from '../assets/planet.svg';
 import '../assets/transitions.css';
 import {Route} from 'react-router-dom';
 
-class People extends Component {
+class Planets extends Component {
 
     render() {
         return (
@@ -14,12 +14,12 @@ class People extends Component {
                     <img src={logo} className="center w3 h3 w4-l h4-l"/>
                 </div>
                 <div className="flex bg-near-white">
-                    <Route exact path="/people" component={PeopleList}/>
-                    <Route path="/people/:id" component={PeopleDetail}/>
+                    <Route exact path="/planets" component={PlanetList}/>
+                    <Route path="/planets/:id" component={PlanetDetail}/>
                 </div>
             </div>
         )
     }
 }
 
-export default People
+export default Planets

@@ -11,6 +11,7 @@ import tiefighter from '../assets/tie_fighter.svg';
 import r2 from '../assets/r2d2.svg';
 import chewbacca from '../assets/chewbacca.svg';
 import './categorylist.css';
+import '../assets/transitions.css';
 import {NavLink} from 'react-router-dom';
 
 
@@ -54,8 +55,7 @@ class CategoryList extends Component {
                     icon = r2;
             }
             return (
-                <CategoryLink name={category.name} icon={icon} icononly={this.props.icononly}/>
-
+                <CategoryLink name={category.name} icon={icon} icononly={this.props.icononly} key={category.name}/>
             )
         })
     }
@@ -63,32 +63,33 @@ class CategoryList extends Component {
     render() {
         return (<div className="flex flex-column nowrap">
                 /*Render Home Element*/
-            <CategoryLink name="home" icon={chewbacca} icononly={this.props.icononly} />
-                          {this.renderList()}
-        </div>
-    )
+                <CategoryLink name="home" icon={chewbacca} icononly={this.props.icononly}/>
+                {this.renderList()}
+            </div>
+        )
     }
-    }
+}
 
-    class CategoryLink extends Component {
-        render() {
-        return (<NavLink to={this.props.name === "home" ? "" : this.props.name}
-        className="link no-underline dim pv2 ph3 pointer b f6 ttu tracked yellow left overflow-x-hidden"
-        href="#" key={this.props.name}>
-        <img className="icon v-mid br1 mr2 w2 h2" src={this.props.icon} key={this.props.name}
-        alt={this.props.icon}/>
-        <label className={(this.props.icononly ? "label-hide o-0" : "label-show o-1" ) + " "}
-        htmlFor={this.props.name}>{this.props.name}</label>
+class CategoryLink extends Component {
+    render() {
+        return (
+            <NavLink to={'/' + (this.props.name === "home" ? "" : this.props.name)}
+                         className="link no-underline dim pv2 ph3 pointer b f6 ttu tracked yellow left overflow-x-hidden"
+                         href="#" key={this.props.name}>
+            <img className="icon v-mid br1 mr2 w2 h2" src={this.props.icon} key={this.props.name}
+                 alt={this.props.icon}/>
+            <label className={(this.props.icononly ? "label-hide o-0" : "label-show o-1" ) + " "}
+                   htmlFor={this.props.name}>{this.props.name}</label>
         </NavLink>)
     };
-    }
+}
 
-    const mapStateToProps = (state) => {
-        return {categories: state.categories};
-    };
+const mapStateToProps = (state) => {
+    return {categories: state.categories};
+};
 
-    const mapDispatchToProps = (dispatch) => {
-        return bindActionCreators({loadCategories: loadCategories}, dispatch);
-    };
+const mapDispatchToProps = (dispatch) => {
+    return bindActionCreators({loadCategories: loadCategories}, dispatch);
+};
 
-    export default connect(mapStateToProps, mapDispatchToProps)(CategoryList);
+export default connect(mapStateToProps, mapDispatchToProps)(CategoryList);

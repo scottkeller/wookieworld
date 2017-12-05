@@ -4,18 +4,27 @@ import logo from '../assets/chewbacca.svg';
 import './app.css';
 import SideBar from './sidebar';
 import People from './people';
+import Planets from './planets';
 import store from '../store';
-import {Route} from 'react-router-dom';
+import {Route, Switch} from 'react-router-dom';
 import '../assets/transitions.css';
+import NotFound from './notfound';
 
 class App extends Component {
     render() {
+        console.log("Rendering");
         return (
             <Provider store={store}>
                 <div className="flex vh-100 vw-100">
                     <SideNav/>
-                    <Route exact path="/" component={Home}/>
-                    <Route path="/people" component={People}/>
+                    <Switch>
+                        <Route exact path="/" component={Home}/>
+                        <Route exact path="/people" component={People}/>
+                        <Route path="/people/:id" component={People}/>
+                        <Route exact path="/planets" component={Planets}/>
+                        <Route path="/planets/:id" component={Planets}/>
+                        <Route path="*" component={NotFound}/>
+                    </Switch>
                 </div>
             </Provider>
         );

@@ -12,14 +12,13 @@ class SideBar extends Component {
     }
 
     componentDidMount() {
-
+        window.innerWidth > 800 ? this.toggleMenu() : null;
     }
 
     toggleMenu() {
         this.setState({
             visible: !this.state.visible
         });
-        console.log(this.state.visible);
     }
 
     handleMouseDown(e) {
@@ -30,7 +29,7 @@ class SideBar extends Component {
         return (
 
             <aside
-                className={(this.state.visible ? "sidebar-open " : "sidebar-closed ") + " sidebar flex flex-column bg-near-black overflow-hidden"}>
+                className={(this.state.visible ? "sidebar-open " : "sidebar-closed ") + " sidebar flex flex-column bg-near-black overflow-hidden br b--mid-gray"}>
                 <div className="head left h3">
                     <div className=" pa3">
                         <SideBarButton handleMouseDown={this.handleMouseDown}/>

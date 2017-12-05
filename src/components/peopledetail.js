@@ -2,12 +2,10 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {loadPeople} from '../actions/people_actions';
-import ItemList from './itemlist';
-
-import Logo from '../assets/luke-skywalker.svg';
+import ItemDetail from './itemdetail';
 
 
-class PeopleList extends Component {
+class PeopleDetail extends Component {
 
     constructor(props, context) {
         super(props, context);
@@ -20,7 +18,15 @@ class PeopleList extends Component {
     }
 
     render() {
-        return(<ItemList data={this.props.people} to="/people" name="People" logo={Logo}/>);
+        const person = this.props.people.find((person) => {
+            let url = person.url.split("/");
+            url = url.length > 1 ? url[url.length - 2] : -1;
+            console.log("URL: " + url);
+            return url === this.props.match.params.id;
+        });
+
+
+        return (person) ? <ItemDetail data={person}/> : null;
     }
 }
 
@@ -32,4 +38,4 @@ const mapDispatchToProps = (dispatch) => {
     return bindActionCreators({loadPeople: loadPeople}, dispatch);
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(PeopleList);
+export default connect(mapStateToProps, mapDispatchToProps)(PeopleDetail);
