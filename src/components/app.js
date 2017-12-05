@@ -53,7 +53,7 @@ class Home extends Component {
         return (
             <div className="fadeinonload flex content flex-column bg-near-white tc overflow-auto">
                 <div className="bg-moon-gray w-100 v5">
-                    <img src={logo} className="center w4 h4 w5-l h5-l"/>
+                    <img src={logo} alt="logo" className="center w4 h4 w5-l h5-l"/>
                 </div>
                 <div className="flex flex-auto flex-column bg-near-white">
                     <p className="f2-ns center lh-copy measure">Welcome to Wookie World! Your source for all <b

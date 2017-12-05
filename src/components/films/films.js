@@ -27,7 +27,7 @@ class Films extends Component {
         return (
             <div className="fadeinonload flex content flex-column bg-near-white tc overflow-auto">
                 <div className="bg-moon-gray w-100 v5 bb">
-                    <img src={logo} className="center w3 h3 w4-l h4-l"/>
+                    <img src={logo} alt="logo" className="center w3 h3 w4-l h4-l"/>
                 </div>
                 {/** TODO: get around double rendering error where state is reset on page reload */}
                 {this.props.films.length > 0 ?

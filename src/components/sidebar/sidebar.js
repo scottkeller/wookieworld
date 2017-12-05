@@ -12,7 +12,9 @@ class SideBar extends Component {
     }
 
     componentDidMount() {
-        window.innerWidth > 800 ? this.toggleMenu() : null;
+       if (window.innerWidth > 800){
+           this.toggleMenu()
+       }
     }
 
     toggleMenu() {
@@ -43,9 +45,9 @@ class SideBar extends Component {
                     <div className="ttu b2 ">
                            <a href="mailto:scott.keller2390@gmail.com" title="Email" class="moon-gray link f6 fw1 dib dim">Email</a>
                         <br/>
-                           <a target="_blank" href="http://www.linkedin.com/in/scottjameskeller"    title="LinkedIn" class="moon-gray link f6 fw1 dib dim">LinkedIn</a>
+                           <a target="_blank" rel="noopener noreferrer" href="http://www.linkedin.com/in/scottjameskeller"    title="LinkedIn" class="moon-gray link f6 fw1 dib dim">LinkedIn</a>
                     <br/>
-                        <a target="_blank" href="https://github.com/scottkeller/wookieworld"  title="Source" class="moon-gray link f6 fw1 dib dim">Source</a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://github.com/scottkeller/wookieworld"  title="Source" class="moon-gray link f6 fw1 dib dim">Source</a>
                     </div>
 
 

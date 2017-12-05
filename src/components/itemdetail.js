@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-import red_saber from '../assets/lightsaber-darth-vader.svg';
-import blue_saber from '../assets/lightsaber-luke-anh.svg';
 import '../assets/transitions.css';
 
 class ItemDetail extends Component {

@@ -62,7 +62,7 @@ class CategoryList extends Component {
 
     render() {
         return (<div className="flex flex-column nowrap">
-                /*Render Home Element*/
+                {/*Render Home Element*/}
                 <CategoryLink name="home" icon={chewbacca} icononly={this.props.icononly}/>
                 {this.renderList()}
             </div>

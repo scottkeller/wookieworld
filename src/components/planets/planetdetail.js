@@ -5,10 +5,6 @@ import {Redirect} from 'react-router-dom';
 
 class PlanetsDetail extends Component {
 
-    constructor(props, context) {
-        super(props, context);
-    }
-
     render() {
         return (this.props.item) ? <ItemDetail data={this.props.item} displayname={this.props.item.title}/> : <Redirect to={"/404"}/>;
     }
