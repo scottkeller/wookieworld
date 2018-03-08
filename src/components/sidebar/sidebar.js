@@ -43,7 +43,7 @@ class SideBar extends Component {
                 <footer className={(this.state.visible ? "fadein-opacity o-0" : "fadeout-opacity o-1" ) + "flex flex-column bottom-0 h4 tc nowrap"}>
                     <small className= "db mid-gray mb2 ">Design By: Scott Keller</small>
                     <div className="ttu b2 ">
-                           <a href="mailto:scott.keller2390@gmail.com" title="Email" className="moon-gray link f6 fw1 dib dim">Email</a>
+                           <a href="mailto:scottjameskeller@gmail.com" title="Email" className="moon-gray link f6 fw1 dib dim">Email</a>
                         <br/>
                            <a target="_blank" rel="noopener noreferrer" href="http://www.linkedin.com/in/scottjameskeller"    title="LinkedIn" className="moon-gray link f6 fw1 dib dim">LinkedIn</a>
                     <br/>
